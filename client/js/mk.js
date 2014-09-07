@@ -1816,3 +1816,51 @@
   window.mk = mk;
 
 }());
+
+
+function $(id) {
+    return document.getElementById(id);
+}
+
+function setLife(container, life) {
+    container.style.width = life + '%';
+}
+
+document.onkeydown = function (e) {
+    if (e.keyCode === 32) {
+        window.location.reload();
+    }
+};
+
+var startGame = function () {
+    $('loading').style.visibility = 'hidden';
+    $('arena').style.visibility = 'visible';
+    $('utils').style.visibility = 'visible';
+};
+var options = {
+    arena: {
+        container: document.getElementById('arena'),
+        arena: mk.arenas.types.THRONE_ROOM
+    },
+    fighters: [{ name: 'Subzero' }, { name: 'Kano' }],
+    callbacks: {
+        attack: function (f, o, l) {
+            if (o.getName() === 'kano') {
+                setLife($('player2Life'), o.getLife());
+            } else {
+                setLife($('player1Life'), o.getLife());
+            }
+        }
+
+    },
+    isHost: /^yes$/i.test(prompt('Are you going to be host?')),
+    gameName: prompt('Enter game name:'),
+    gameType: 'network'
+};
+
+function startNewGame() {
+    mk.start(options).ready(function () {
+        startGame();
+    });
+}
+startNewGame();
