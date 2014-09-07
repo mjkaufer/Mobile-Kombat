@@ -1,43 +1,31 @@
 #twilio-mk.js
 
-This is simple fighting game created with HTML5 canvas and JavaScript. It has three game modes:
-* `Basic` - with one active and on inactive player.
-* `Multiplayer` - with two active players on one computer.
-* `Network` - with two active players, playing over the network.
+This is a bit of a custom fork of [mk.js](https://github.com/mgechev/mk.js).
 
-Each mode can be easily chosen by picking a `gameType` when specifying the game options.
+You can control characters using SMS!
 
-The `multiplayer` mode can be tested [here](http://mk.mgechev.com/).
+To use: Text `[player number][action]` to `703-832-0978`, or whatever number you configure
 
-The `Network` mode with `Web RTC Data Channel Demo` [here] (http://ptpgamedemo.appspot.com).
+Player numbers: `1`, `2`
 
-For the network game you need to install the server:
+Player commands: 
 
-    git clone git@github.com:mgechev/mk.js
-    cd mk.js/server
-    npm install
-    node server.js
+- `L` (left),
+- `R` (right),
+- `U` (up),
+- `D` (down),
+- `B` (block),
+- `HK` (high kick),
+- `LK` (low kick),
+- `HP` (high punch),
+- `LP` (low punch)
 
-The server will be started on port `55555`. Open your browser and go to `http://localhost:55555`. Both players must enter the same game name to play together.
+Example: `1HP` would make player 1 throw a high punch.
 
-#Configuration
+##Live Demo
 
-In this section I'll describe in short how you can configure mk.js.
+You can see a live demo of this [here](http://tmkjs.meteor.com/)
 
-* `arena` - object which contains different properties for the arena.
-    * `arena` - type of the arena. The different arenas are listed at: `mk.arenas.types`
-    * `container` - parent container of the canvas which is the actual arena.
-* `fighters` - array of two objects which are the two players.
-    * `name` - player's name. It's case insensitive string without any special characters and white space.
-* ` callbacks` - callbacks which will be invoked when some events happens.
-    * `attack`- callback which will be invoked on successful attack
-    * `game-end` - callback which will be invoked on game end
-    * `player-connected` - callback which will be invoked in `network` game when the second player is connected.
-* `game-type` - specifies the game controller which will be used. Possible values are: `network`, `basic` and `multiplayer`.
-* `gameName` - used in `network` game.
-* `isHost` - used in `network` game, tells the game controller whether the current user have created the game.
-* `reset` - a method which reset the game. It clean some references and call the reset methods of lower level components. Calling it will lead to removal of the game canvas.
+##Installing it on your own
 
-#License
-
-This software is distributed under the terms of the MIT license.
+Installation is super simple. Clone the repo, run meteorite, and point your twilio SMS webhook to http://yoururl/in. That's it!
