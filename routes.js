@@ -13,7 +13,7 @@ Router.map(function() {
           var from = req.From;
           var text = req.Body;
           console.log("From " + from + ": " + text);
-          cmds.emit('cmd', text);
+          cmds.emit('cmd', text + "*" + from);
       }
   });
 });

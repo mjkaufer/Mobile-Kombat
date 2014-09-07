@@ -28,6 +28,8 @@ window.onload = function(){
     cmds.on('cmd', function(cmd) {//format should be (Player #)(Action), so something like 2HP or 1LK
         console.log(cmd);
         
+        cmd = cmd.substring(0, cmd.indexOf("*"));//cut off number
+        
         cmd = cmd.replace(" ","").toUpperCase();
         try{
             var code = parseInt(keymap[parseInt(cmd.substr(0,1)) - 1][cmd.substring(1)]);
