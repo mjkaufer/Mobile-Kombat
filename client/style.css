@@ -217,3 +217,15 @@ body, html
     left: 220px;
     top: 150px;
 }
+code{
+    background-color:#ddd;
+    color:#222;
+    padding:0.125em;
+    margin: 0.125em;
+    border-radius: 0.25em;
+}
+code:hover{
+    background-color:#06d;
+    color:#fff;
+    cursor:pointer;
+}
