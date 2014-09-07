@@ -1868,6 +1868,8 @@ mk.controllers.Multiplayer.prototype.key = function(key, duration){//key is key 
     }
 
     startGame();
+    
+    window.mk = mk;
 
 
 
