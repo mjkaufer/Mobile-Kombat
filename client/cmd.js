@@ -26,7 +26,11 @@ keymap = [
 
 window.onload = function(){
     cmds.on('cmd', function(cmd) {//format should be (Player #)(Action), so something like 2HP or 1LK
-        console.log(cmd);
+        //console.log(cmd);
+        var from = cmd.substring(cmd.indexOf("*")+1);
+        var message = cmd.substring(0, cmd.indexOf("*"));
+        
+        console.log(message + " sent from " + from);
         
         cmd = cmd.substring(0, cmd.indexOf("*"));//cut off number
         
