@@ -4,7 +4,7 @@ This is a bit of a custom fork of [mk.js](https://github.com/mgechev/mk.js).
 
 You can control characters using SMS!
 
-To use: Text `[player number][action]` to `(703) 991-6154`, or whatever number you configure
+To use: Text `[player number][action]` to  whatever number you configure
 
 Player numbers: `1`, `2`
 
