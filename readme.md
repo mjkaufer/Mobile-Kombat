@@ -4,7 +4,9 @@ This is a bit of a custom fork of [mk.js](https://github.com/mgechev/mk.js).
 
 You can control characters using SMS!
 
-To use: Text `[player number][action]` to  whatever number you configure
+To use: Text `<player number><action>` to `(703) 991-4940`
+
+Example: `1HP` would make player 1 throw a high punch.
 
 Player numbers: `1`, `2`
 
@@ -19,8 +21,6 @@ Player commands:
 - `LK` (low kick),
 - `HP` (high punch),
 - `LP` (low punch)
-
-Example: `1HP` would make player 1 throw a high punch.
 
 ##Live Demo
 
