@@ -1,4 +1,8 @@
-#twilio-mk.js
+#Mobile-Kombat
+
+##Warning, Hella Deprecated
+
+##Check out the [node.js version](https://github.com/mjkaufer/MobileKombatNode)
 
 This is a bit of a custom fork of [mk.js](https://github.com/mgechev/mk.js).
 
